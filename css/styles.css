@@ -888,6 +888,150 @@ button {
   background-color: var(--bg-alt);
 }
 
+/* About Company Section Grid & Mobile Responsiveness */
+.about-company-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-lead-text {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.about-stats-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-stat-item h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--dark-amethyst);
+}
+
+.about-stat-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+.about-rating-badge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: var(--bg-card);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-rating-badge .badge-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-light);
+  color: var(--dark-amethyst);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.about-rating-badge h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 0.2rem;
+}
+
+.about-rating-badge p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .about-company-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-rating-badge {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-company-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .about-lead-text {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .about-stat-item h4 {
+    font-size: 1.2rem;
+  }
+
+  .about-stat-item p {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  .about-rating-badge {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.85rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+}
+
 /* Tour Packages Cards Grid */
 /* Tour Packages Cards Grid - 4 Cards Per Row on Desktop */
 .packages-grid {
