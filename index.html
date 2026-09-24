@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chillz Tour - Best Travel Agency for Domestic Tour Packages</title>
+  <meta name="description" content="Book customized domestic holiday packages in India with Chillz Tour. Explore Kerala, Kashmir, Goa, Himachal, Rajasthan & Andaman with expert guidance and transparent pricing.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Animate.css for entrance animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- 2-Second Animated 3D Landing Screen / Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-3d-bg">
+      <div class="orb-3d orb-1"></div>
+      <div class="orb-3d orb-2"></div>
+      
+      <!-- ✈️ Flying Aeroplane across Sky -->
+      <div class="anim-sky-airplane">
+        <i class="fa-solid fa-plane-up"></i>
+        <div class="airplane-contrail"></div>
+      </div>
+    </div>
+
+    <div class="preloader-content 3d-content-box">
+      <!-- 3D Rotating Compass Emblem -->
+      <div class="preloader-3d-emblem">
+        <div class="ring-3d ring-1"></div>
+        <div class="ring-3d ring-2"></div>
+        <div class="preloader-icon-3d">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+      </div>
+
+      <!-- Main Company Name Branding -->
+      <div class="preloader-brand 3d-brand-text">Chillz<span>Tours</span></div>
+      <div class="preloader-company-badge">
+        <i class="fa-solid fa-award"></i> Chillz Tours Domestic Travel Agency
+      </div>
+      <p class="preloader-tagline">Crafting Incredible Domestic Holiday Experiences Across India</p>
+
+      <!-- 3D Floating Mini Destination Badges -->
+      <div class="preloader-3d-badges">
+        <span class="badge-3d badge-kerala"><i class="fa-solid fa-water"></i> Kerala</span>
+        <span class="badge-3d badge-kashmir"><i class="fa-solid fa-snowflake"></i> Kashmir</span>
+        <span class="badge-3d badge-goa"><i class="fa-solid fa-umbrella-beach"></i> Goa</span>
+      </div>
+
+      <!-- 🚆 Train & 🏍️ Bike Travel Animations Track -->
+      <div class="travel-anim-track">
+        <!-- Moving Indian Express Train -->
+        <div class="anim-train-wrapper">
+          <div class="anim-train">
+            <i class="fa-solid fa-train-subway"></i>
+            <i class="fa-solid fa-train"></i>
+            <i class="fa-solid fa-train"></i>
+          </div>
+          <div class="rail-line"></div>
+        </div>
+
+        <!-- Riding Tourist Bike -->
+        <div class="anim-bike-wrapper">
+          <div class="anim-bike">
+            <i class="fa-solid fa-motorcycle"></i>
+          </div>
+          <div class="road-line"></div>
+        </div>
+      </div>
+
+      <!-- 2-Second Animated Progress Bar & Percentage Counter -->
+      <div class="preloader-bar-wrapper">
+        <div class="preloader-bar"></div>
+      </div>
+      <div class="preloader-status">
+        <span id="preloaderPercent">0%</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Sticky Navbar -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon"><i class="fa-solid fa-plane-departure"></i></div>
+        Chillz<span>Tour</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="packages.html" class="nav-link">Tour Packages</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-accent btn-sm"><i class="fa-solid fa-calendar-check"></i> Plan My Trip</a>
+      </div>
+
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section with Animated Entrances & 3D Interactive Visual Showcase -->
+  <section class="hero" id="hero3DSection">
+    <!-- 3D Ambient Canvas Matrix Background -->
+    <canvas id="hero3DCanvas" class="hero-3d-canvas"></canvas>
+
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge animate__animated animate__fadeInDown">
+            <i class="fa-solid fa-award"></i> Premier Domestic Tour Agency
+          </div>
+          <h1 class="hero-title animate__animated animate__fadeInUp">Creating Memories, One <span>Destination</span> At A Time</h1>
+          <p class="hero-description animate__animated animate__fadeInUp animate__delay-1s">From serene backwaters of Kerala and snowy peaks of Kashmir to sunny beaches of Goa & tropical islands of Andaman. Plan your dream Indian holiday with Chillz Tour.</p>
+          <div class="hero-actions animate__animated animate__zoomIn animate__delay-1s">
+            <a href="packages.html" class="btn btn-accent btn-lg"><i class="fa-solid fa-suitcase-rolling"></i> View Tour Packages</a>
+            <a href="contact.html" class="btn btn-outline btn-lg"><i class="fa-solid fa-headset"></i> Get Free Callback</a>
+          </div>
+        </div>
+
+        <!-- Hero Right-side Floating Destination Image Cards (Distinct Indian Places) -->
+        <div class="hero-media animate__animated animate__fadeInRight animate__delay-1s">
+          <div class="hero-card-stack">
+            <div class="hero-img-card hero-img-card-1">
+              <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=600&q=80" alt="Kashmir Snow Valleys" loading="eager" fetchpriority="high">
+              <div class="hero-img-badge"><i class="fa-solid fa-snowflake"></i> Kashmir Valleys</div>
+            </div>
+            <div class="hero-img-card hero-img-card-2">
+              <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80" alt="Kerala Backwaters Houseboat" loading="eager" fetchpriority="high">
+              <div class="hero-img-badge"><i class="fa-solid fa-water"></i> Kerala Backwaters</div>
+            </div>
+            <div class="hero-img-card hero-img-card-3">
+              <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=600&q=80" alt="Royal Rajasthan Palaces" loading="eager" fetchpriority="high">
+              <div class="hero-img-badge"><i class="fa-solid fa-chess-rook"></i> Royal Rajasthan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Embedded Glassmorphism Stats Cards with AOS Staggered Delays -->
+      <div class="hero-stats-grid">
+        <div class="hero-stat-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-location-dot hero-stat-icon"></i>
+          <div class="stat-number hero-stat-number" data-count="150" data-suffix="+">0</div>
+          <div class="hero-stat-label">Destinations Across India</div>
+        </div>
+        <div class="hero-stat-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-users hero-stat-icon"></i>
+          <div class="stat-number hero-stat-number" data-count="12000" data-suffix="+">0</div>
+          <div class="hero-stat-label">Happy Travelers</div>
+        </div>
+        <div class="hero-stat-card" data-aos="fade-up" data-aos-delay="300">
+          <i class="fa-solid fa-star hero-stat-icon"></i>
+          <div class="stat-number hero-stat-number" data-count="4" data-suffix="/5">0</div>
+          <div class="hero-stat-label">Customer Rating</div>
+        </div>
+        <div class="hero-stat-card" data-aos="fade-up" data-aos-delay="400">
+          <i class="fa-solid fa-shield-halved hero-stat-icon"></i>
+          <div class="stat-number hero-stat-number" data-count="10" data-suffix="+ Yrs">0</div>
+          <div class="hero-stat-label">Trusted Service</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Booking & Trip Search Bar (Directly Below Hero Section) -->
+  <section class="quick-booking-section">
+    <div class="container">
+      <div class="booking-bar-card" data-aos="fade-up">
+        <form id="quickBookingForm" class="booking-bar-form">
+          <div class="booking-form-item">
+            <label><i class="fa-solid fa-location-dot"></i> Select Destination</label>
+            <select id="quickDestSelect" required>
+              <option value="">Choose Destination</option>
+              <option value="kerala">Kerala Backwaters</option>
+              <option value="kashmir">Kashmir Valleys</option>
+              <option value="goa">Goa Beaches</option>
+              <option value="himachal">Himachal Pradesh</option>
+              <option value="rajasthan">Royal Rajasthan</option>
+              <option value="andaman">Andaman Islands</option>
+            </select>
+          </div>
+
+          <div class="booking-form-item">
+            <label><i class="fa-regular fa-calendar-days"></i> Travel Date</label>
+            <input type="date" id="quickTravelDate" required>
+          </div>
+
+          <div class="booking-form-item">
+            <label><i class="fa-solid fa-users"></i> Guests / Group</label>
+            <select id="quickGuestsSelect">
+              <option value="2">2 Adults (Couple)</option>
+              <option value="4">Family (3 - 5 Guests)</option>
+              <option value="6">Group (6+ Guests)</option>
+              <option value="1">Solo Traveler</option>
+            </select>
+          </div>
+
+          <div class="booking-form-item booking-btn-wrapper">
+            <button type="submit" class="btn btn-accent btn-lg w-100">
+              <i class="fa-solid fa-bolt"></i> Quick Book Trip
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Tour Packages Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-tag">Popular Packages</span>
+        <h2 class="section-title">Handcrafted Domestic Packages</h2>
+        <p class="section-subtitle">Explore our top-selling Indian holiday packages thoughtfully curated with hotels, cab transfers, meals & sightseeing.</p>
+      </div>
+
+      <div class="packages-grid" id="featuredPackagesGrid">
+        <!-- Rendered dynamically by main.js with staggered AOS delays -->
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem;" data-aos="fade-up">
+        <a href="packages.html" class="btn btn-secondary btn-lg">View All Tour Packages <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Chillz Tour -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-tag">Why Book With Us</span>
+        <h2 class="section-title">The Chillz Tour Advantage</h2>
+        <p class="section-subtitle">We handle every detail from resort stays, private AC vehicle transfers, to local tour guides so you can travel worry-free.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-img-box">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80" alt="Best Price Guarantee">
+          </div>
+          <h3 class="feature-title">Best Price Guarantee</h3>
+          <p class="feature-desc">Unbeatable value with transparent package pricing and zero hidden booking charges.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-img-box">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80" alt="Tailor-Made Itineraries">
+          </div>
+          <h3 class="feature-title">Tailor-Made Itineraries</h3>
+          <p class="feature-desc">Customize your travel dates, resort choices, and sightseeing spots to match your preferences.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-img-box">
+            <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&w=600&q=80" alt="24/7 On-Trip Concierge">
+          </div>
+          <h3 class="feature-title">24/7 On-Trip Concierge</h3>
+          <p class="feature-desc">Our dedicated travel experts and local coordinators are available around the clock.</p>
+        </div>
+
+        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="feature-img-box">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Verified Resort Stays">
+          </div>
+          <h3 class="feature-title">Verified Resort Stays</h3>
+          <p class="feature-desc">We personally audit and select 3 to 5-star hotels and houseboats for high safety and comfort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section class="section" style="background: linear-gradient(135deg, var(--royal-navy) 0%, #060e1a 100%); color: #fff;">
+    <div class="container text-center" data-aos="zoom-in">
+      <h2 style="font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 1rem;">Ready for Your Next Unforgettable Holiday?</h2>
+      <p style="font-size: 1.15rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 2rem auto;">Book your domestic package today or get a free custom itinerary quote directly on WhatsApp!</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-accent btn-lg"><i class="fa-solid fa-envelope"></i> Send Enquiry</a>
+        <a href="https://wa.me/919876543210?text=Hi%20Chillz%20Tour,%20I%20want%20to%20enquire%20about%20a%20domestic%20tour%20package." target="_blank" class="btn btn-outline btn-lg">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section (Customer Reviews - Positioned Directly Above Footer) -->
+  <section class="section bg-alt reviews-section">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-tag">Traveler Stories</span>
+        <h2 class="section-title">What Our Travelers Say</h2>
+        <p class="section-subtitle">Read real reviews from happy customers who explored India with Chillz Tour.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--royal-navy);">Rajesh & Sunita</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Kerala Backwaters Honeymoon</p>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Our Kerala houseboat and Munnar tea garden trip organized by Chillz Tour was flawless! Everything from private car pickup to luxury resort stay was managed perfectly."</p>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--royal-navy);">Ananya Sharma</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Kashmir Family Holiday</p>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"The Kashmir snow tour was breathtaking! Gondola ride tickets in Gulmarg and Shikara ride on Dal Lake were arranged seamlessly. Highly recommend Chillz Tour!"</p>
+        </div>
+
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-user">
+            <div class="testimonial-avatar">V</div>
+            <div>
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--royal-navy);">Vikramaditya Verma</h4>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Goa Beach Getaway</p>
+            </div>
+          </div>
+          <div class="testimonial-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Great pricing and zero hidden charges! Sunset river cruise and watersports in Goa were super fun. Special thanks to Hemamalini S and the team."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Floating Actions -->
+  <a href="https://wa.me/919876543210?text=Hi%20Chillz%20Tour,%20I%20need%20help%20with%20a%20tour%20booking!" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp" title="Instant WhatsApp Support">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <a href="tel:+919876543210" class="call-float" aria-label="Call Us" title="Call Concierge">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <!-- Native Package Detail & Booking Dialog Modal -->
+  <dialog id="packageModal" class="package-modal">
+    <div class="modal-header">
+      <div class="modal-header-overlay"></div>
+      <button class="modal-close-btn" onclick="closePackageModal()" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-title-box">
+        <h3 id="modalPkgTitle" style="font-size: 1.6rem; font-weight: 800;">Package Title</h3>
+        <p id="modalPkgLoc" style="color: var(--vanilla-custard); font-size: 0.95rem; font-weight: 600;">Location & Duration</p>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="overview"><i class="fa-solid fa-circle-info"></i> Overview</button>
+        <button class="modal-tab-btn" data-tab="itinerary"><i class="fa-solid fa-route"></i> Day-wise Plan</button>
+        <button class="modal-tab-btn" data-tab="inclusions"><i class="fa-solid fa-list-check"></i> Inclusions</button>
+        <button class="modal-tab-btn" data-tab="book"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+      </div>
+
+      <!-- Tab 1: Overview -->
+      <div id="tab-overview" class="modal-tab-content active">
+        <p id="modalPkgOverviewText" style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.5rem;"></p>
+        <div class="modal-deal-box" style="background: var(--bg-alt); padding: 1.25rem; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between;">
+          <div>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Special Deal Price</span>
+            <div id="modalPkgPriceDisplay" style="font-size: 1.8rem; font-weight: 800; color: var(--dark-amethyst);"></div>
+          </div>
+          <button class="btn btn-primary" onclick="switchToPackageModalTab('book')">Proceed to Booking</button>
+        </div>
+      </div>
+
+      <!-- Tab 2: Day-wise Plan -->
+      <div id="tab-itinerary" class="modal-tab-content">
+        <div id="modalPkgItinerary"></div>
+      </div>
+
+      <!-- Tab 3: Inclusions & Exclusions -->
+      <div id="tab-inclusions" class="modal-tab-content">
+        <div class="modal-inclusions-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div>
+            <h4 style="color: var(--success); margin-bottom: 0.75rem;"><i class="fa-solid fa-check"></i> What's Included</h4>
+            <ul id="modalPkgInclusions"></ul>
+          </div>
+          <div>
+            <h4 style="color: var(--danger); margin-bottom: 0.75rem;"><i class="fa-solid fa-xmark"></i> What's Excluded</h4>
+            <ul id="modalPkgExclusions"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: Booking Form -->
+      <div id="tab-book" class="modal-tab-content">
+        <div class="modal-booking-box">
+          <h4 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; color: var(--secondary);">Quick Package Booking & Enquiry</h4>
+          <form onsubmit="handleModalBookingSubmit(event)">
+            <input type="hidden" id="modalBookingPkgName" name="pkgName">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" name="phone" class="form-control" placeholder="+91 9876543210" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" name="email" class="form-control" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>Preferred Travel Date *</label>
+                <input type="date" name="travelDate" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Number of Travelers *</label>
+              <select name="travelers" class="form-control" onchange="updateModalBookingAmount()" oninput="updateModalBookingAmount()">
+                <option value="1">1 Person (Solo Traveler)</option>
+                <option value="2" selected>2 Persons (Couple)</option>
+                <option value="3">3 Persons</option>
+                <option value="4">4 Persons (Family Group)</option>
+                <option value="5">5 Persons</option>
+                <option value="6">6 Persons (Group)</option>
+                <option value="8">8 Persons</option>
+                <option value="10">10 Persons (Large Group)</option>
+              </select>
+            </div>
+
+            <!-- Dynamic Live Amount Calculation Card -->
+            <div class="booking-amount-box">
+              <div>
+                <span style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); display: block;">Total Calculated Amount</span>
+                <span style="font-size: 0.85rem; color: var(--saffron-gold); font-weight: 700;" class="modalAmountDetails">₹0 × 2 Persons</span>
+              </div>
+              <div style="font-size: 1.65rem; font-weight: 800; color: var(--royal-navy);" class="modalTotalAmountDisplay">
+                ₹0
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              <i class="fa-brands fa-whatsapp"></i> Confirm & Connect on WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid" data-aos="fade-up">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon"><i class="fa-solid fa-plane-departure"></i></div>
+            Chillz<span>Tour</span>
+          </a>
+          <p class="footer-text">Chillz Tour is a premier travel agency dedicated to crafting unforgettable domestic tour experiences across India.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+            <li><a href="gallery.html">Image Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Top Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="packages.html?dest=kerala">Kerala Backwaters</a></li>
+            <li><a href="packages.html?dest=kashmir">Kashmir Valley</a></li>
+            <li><a href="packages.html?dest=goa">Goa Beaches</a></li>
+            <li><a href="packages.html?dest=himachal">Himachal Manali</a></li>
+            <li><a href="packages.html?dest=rajasthan">Rajasthan Forts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact & Address</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fa-solid fa-location-dot"></i> 67, Chillz Tours, R.S. Puram, Coimbatore, Tamil Nadu</li>
+            <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fa-solid fa-envelope"></i> chillztours@gmail.com</li>
+            
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Chillz Tour • CodeThrive Infotech. All Rights Reserved | <a href="#" onclick="openPolicyModal('privacy'); return false;">Privacy Policy</a> • <a href="#" onclick="openPolicyModal('terms'); return false;">Terms & Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS (Animate On Scroll) JS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/packages-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
