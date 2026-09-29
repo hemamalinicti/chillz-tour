@@ -224,24 +224,17 @@ button {
 .brand-icon {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--royal-navy), var(--slate-dark));
-  border-radius: 12px;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--saffron-gold);
-  font-size: 1.4rem;
-  box-shadow: 0 4px 14px rgba(230, 126, 34, 0.3);
   transition: transform 0.4s ease;
-  overflow: hidden;
-  padding: 3px;
 }
 
 .brand-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 9px;
 }
 
 .brand-logo:hover .brand-icon {
@@ -2258,8 +2251,14 @@ dialog.package-modal::backdrop {
 .footer {
   background: var(--royal-navy);
   color: #cbd5e1;
-  padding: 2.25rem 0 1.25rem 0;
+  padding: 2.5rem 0 1.25rem 0;
   border-top: 1px solid var(--slate-dark);
+}
+
+.footer .container {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  box-sizing: border-box;
 }
 
 .footer-grid {
@@ -2277,9 +2276,18 @@ dialog.package-modal::backdrop {
 }
 
 @media (max-width: 600px) {
+  .footer {
+    padding: 2rem 0 1.25rem 0;
+  }
+
+  .footer .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem 1rem;
+    gap: 1.5rem 1.25rem;
   }
 
   .footer-brand {
@@ -2288,6 +2296,10 @@ dialog.package-modal::backdrop {
 
   .footer-grid > div:nth-child(4) {
     grid-column: 1 / -1;
+  }
+
+  .footer-contact-list li {
+    word-break: break-word;
   }
 }
 
@@ -2756,25 +2768,21 @@ dialog.package-modal::backdrop {
 }
 
 .preloader-icon-3d {
-  width: 72px;
-  height: 72px;
-  background: var(--royal-navy);
-  border-radius: 20px;
+  width: 75px;
+  height: 75px;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.5);
+  filter: drop-shadow(0 10px 25px rgba(245, 158, 11, 0.45));
   transform: translateZ(25px);
   animation: plane3DFloat 2s infinite ease-in-out;
-  overflow: hidden;
-  padding: 4px;
 }
 
 .preloader-logo-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 16px;
 }
 
 @keyframes plane3DFloat {
